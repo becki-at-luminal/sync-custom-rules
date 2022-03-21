@@ -1,3 +1,7 @@
+arch: amd64
+os: linux
+dist: xenial
+
 env:
   global:
 #  - PATH="$HOME/.local/bin:$PATH"
