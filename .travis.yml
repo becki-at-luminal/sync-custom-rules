@@ -8,10 +8,10 @@ env:
   - FUGUE_VERSION=0.18.0
 
 before_script:
-  - mkdir "$HOME/.local/bin"
-  - wget -O fugue https://github.com/fugue/fugue-client/releases/download/v${FUGUE_VERSION}/fugue-linux-amd64
-  - chmod 755 fugue
-  - mv fugue "$HOME/.local/bin"
+  - mkdir $HOME/.local/bin
+  - curl -L "https://github.com/fugue/fugue-client/releases/download/v${FUGUE_VERSION}/fugue-linux-amd64"
+  - mv fugue-linux-amd64 $HOME/.local/bin/fugue
+  - chmod 755 $HOME/.local/bin/fugue
 
 script:
   - fugue sync rules my-custom-rules
