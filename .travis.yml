@@ -9,7 +9,7 @@ env:
 
 before_script:
 #  - mkdir $HOME/.local/bin
-  - curl "https://github.com/fugue/fugue-client/releases/download/v${FUGUE_VERSION}/fugue-linux-amd64" -o fugue
+  - curl -L "https://github.com/fugue/fugue-client/releases/download/v${FUGUE_VERSION}/fugue-linux-amd64" -o fugue
 #  - mv fugue-linux-amd64 $HOME/.local/bin/fugue
   - sudo mv fugue /usr/local/bin
   - chmod 755 /usr/local/bin/fugue
