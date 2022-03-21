@@ -1,0 +1,22 @@
+arch: amd64
+os: linux
+dist: xenial
+
+env:
+  global:
+  - PATH="$HOME/.local/bin:$PATH"
+  - FUGUE_VERSION=0.18.0
+
+before_script:
+  - mkdir "$HOME/.local/bin"
+
+install:
+  - wget -O fugue "https://github.com/fugue/fugue-client/releases/download/v{FUGUE_VERSION}/fugue-linux-amd64"
+  - mv fugue "$HOME/.local/bin"
+
+script:
+  - fugue sync rules my-custom-rules
+
+branches:
+  only:
+  - main
