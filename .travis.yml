@@ -4,14 +4,15 @@ dist: xenial
 
 env:
   global:
-  - PATH="$HOME/.local/bin:$PATH"
+#  - PATH="$HOME/.local/bin:$PATH"
   - FUGUE_VERSION=0.18.0
 
 before_script:
-  - mkdir $HOME/.local/bin
-  - curl -L "https://github.com/fugue/fugue-client/releases/download/v${FUGUE_VERSION}/fugue-linux-amd64"
-  - mv fugue-linux-amd64 $HOME/.local/bin/fugue
-  - chmod 755 $HOME/.local/bin/fugue
+#  - mkdir $HOME/.local/bin
+  - curl -L "https://github.com/fugue/fugue-client/releases/download/v${FUGUE_VERSION}/fugue-linux-amd64" > fugue
+#  - mv fugue-linux-amd64 $HOME/.local/bin/fugue
+  - chmod +x fugue
+  - sudo mv fugue /usr/local/bin
 
 script:
   - fugue sync rules my-custom-rules
