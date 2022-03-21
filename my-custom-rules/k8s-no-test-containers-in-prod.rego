@@ -5,7 +5,7 @@ import data.fugue
 
 __rego__metadoc__ := {
 	"title": "Job containers in the prod namespace should not be named `test`",
-   "description": "Do not name Job containers `test` if they are in the `prod` namespace. Test containers should not be in prod.",
+   "description": "Do not name Job containers `test` if they are in the `prod` namespace. Test containers should not be in prod",
 	"custom": {
      "providers": ["REPOSITORY"],
      "severity": "Low"
