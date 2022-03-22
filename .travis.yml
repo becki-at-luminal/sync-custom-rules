@@ -13,6 +13,7 @@ script:
 #  - mv fugue-linux-amd64 $HOME/.local/bin/fugue
   - ls -l fugue
   - chmod +x fugue
+  - ./fugue --version
   - ls -l fugue
   - sudo mv fugue /usr/local/bin
   - ls -l /usr/local/bin/fugue
