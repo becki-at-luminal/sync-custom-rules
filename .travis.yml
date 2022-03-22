@@ -11,9 +11,11 @@ script:
 #  - mkdir $HOME/.local/bin
   - wget -O fugue "https://github.com/fugue/fugue-client/releases/download/v${FUGUE_VERSION}/fugue-linux-amd64"
 #  - mv fugue-linux-amd64 $HOME/.local/bin/fugue
+  - ls -l fugue
   - chmod +x fugue
+  - ls -l fugue
   - sudo mv fugue /usr/local/bin
-  - echo $PATH
+  - ls -l /usr/local/bin/fugue
   - fugue --version
   - fugue sync rules my-custom-rules
 
