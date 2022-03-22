@@ -9,12 +9,13 @@ env:
 
 before_script:
 #  - mkdir $HOME/.local/bin
-  - curl -L "https://github.com/fugue/fugue-client/releases/download/v${FUGUE_VERSION}/fugue-linux-amd64" -o fugue
+  - wget -O fugue "https://github.com/fugue/fugue-client/releases/download/v${FUGUE_VERSION}/fugue-linux-amd64"
 #  - mv fugue-linux-amd64 $HOME/.local/bin/fugue
+  - chmod +x fugue
   - sudo mv fugue /usr/local/bin
-  - chmod 755 /usr/local/bin/fugue
 
 script:
+  - fugue --version
   - fugue sync rules my-custom-rules
 
 branches:
