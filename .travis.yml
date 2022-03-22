@@ -13,6 +13,7 @@ before_script:
 #  - mv fugue-linux-amd64 $HOME/.local/bin/fugue
   - chmod +x fugue
   - sudo mv fugue /usr/local/bin
+  - echo $PATH
 
 script:
   - fugue --version
