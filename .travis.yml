@@ -1,6 +1,6 @@
 arch: amd64
 os: linux
-dist: trusty
+# dist: trusty
 
 env:
   global:
@@ -9,7 +9,7 @@ env:
 
 script:
 #  - mkdir $HOME/.local/bin
-  - wget -O fugue "https://github.com/fugue/fugue-client/releases/download/v${FUGUE_VERSION}/fugue-linux-amd64"
+  - wget -O fugue https://github.com/fugue/fugue-client/releases/download/v${FUGUE_VERSION}/fugue-linux-amd64
 #  - mv fugue-linux-amd64 $HOME/.local/bin/fugue
   - ls -l fugue
   - chmod +x fugue
